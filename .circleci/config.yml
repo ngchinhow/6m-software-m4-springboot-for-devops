@@ -1,0 +1,11 @@
+version: 2.1
+
+orbs:
+  heroku: circleci/heroku@2.0.0
+
+workflows:
+  deployment_only:
+    jobs:
+      - heroku/deploy-via-git:
+          app-name: chinhow-su-devops
+          tag: 0.0.1-SNAPSHOT
